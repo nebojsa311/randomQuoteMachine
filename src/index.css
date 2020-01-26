@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.07em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#quote-box {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width: 50vw;
+    height: 50vh;
+    margin: 10% auto 0px auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    min-height: 15em;
+    background-color: #2e8545;
+    color:white;
+}
+
+#text {
+    grid-row-start: span 2;
+    padding: 60px 60px 0px 60px;
+    text-align: center;
+    grid-column: 1 / span 2;
+}
+
+#author {
+    text-align: end;
+    padding-right: 10%;
+    grid-column: 1 / span 2;
+}
+
+#tweet-css{
+    grid-column: 1 / span 1;
+    display: grid;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+
+#tweet-quote{
+    width: 50%;
+    display: inline-block;
+    padding-left: 10%;
+    color:black;
+}
+
+#tweet-quote:hover{
+    opacity: 0.5;
+}
+
+#newQ-css{
+    grid-column: 2 / span 1;
+    display: grid;
+    justify-content: center;
+}
+
+#new-quote{
+    font-size: 0.9em;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 1.5em;
+    width: 6em;
+    margin-top: 15%;
+    
+}
+
+#new-quote:hover{
+    background-color:lightgoldenrodyellow;
+    cursor: pointer;
+    border: 1px solid black;
+    opacity:0.8;
+}
+
+
+@media only screen and (max-width: 950px) {
+    #quote-box{
+        width: 70vw;
+        height: 40vh;
+        margin-left:auto;
+        min-height: 15em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        font-size: 1.02em;
+    }
+
+    #quote-box{
+        width: 90vw;
+        height: 70vh;
+        margin-left:auto;
+        min-height: 15em;
+    }
 }
